@@ -6,6 +6,7 @@ hackyNews.factory('LinksFactory', function LinksFactory() {
   ];
 
   factory.addLink = function() {
+    console.log(factory.links);
     factory.links.push({ title: factory.linkTitle, url: factory.url, user: factory.userName });
     factory.linkTitle = null;
     factory.url = null;
