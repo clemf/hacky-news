@@ -3,7 +3,7 @@
 
 <ul>
   <li ng-repeat= "item in links">
-    <p><a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
+    <p><a ng-click = "LinksFactory.upVote({{ item.id }})">^</a><a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
     {{ item }}
   </li>
 </ul>
