@@ -1,4 +1,5 @@
-<form role="form">
+<form class="form-horizontal" role="form">
+  <legend>Submit a Link</legend>
   <div class = "form-group">
     <input ng-model="LinksFactory.linkTitle" placeholder="Enter the Link Title" class="form-control">
   </div>
@@ -8,7 +9,5 @@
   <div class = "form-group">
     <input ng-model="LinksFactory.userName" placeholder="Enter Your User Name" class="form-control">
   </div>
-  <button type="submit" class="btn" ng-click="changeView('home')">Submit</button>
+  <button type="submit" class="btn btn-primary" ng-click="changeView('home')">Submit</button>
 </form>
-
-<a ui-sref="home">home</a>

@@ -1,9 +1,12 @@
-<h1>Welcome to Hacky News</h1>
-<a ui-sref="submit">Submit a new link</a>
 
-<ul>
-  <li ng-repeat= "item in links | orderBy : '-rank'">
-    <p><a ng-click = "upVote(item.id)">^</a><a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
-     <a ui-sref="comments({ linkId: item.id })">{{ item.comments.length }} comments</a>
-  </li>
-</ul>
+<div class="col-md-9">
+  <h1>Welcome to Hacky News</h1>
+  <a ui-sref="submit">Submit a new link</a>
+
+  <ol>
+    <li ng-repeat= "item in links | orderBy : '-rank'">
+      <p><a ng-click = "upVote(item.id)">&#x25B2;</a>    <a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
+       <a ui-sref="comments({ linkId: item.id })">{{ item.comments.length }} comments</a> {{ item }}
+    </li>
+  </ol>
+</div>
