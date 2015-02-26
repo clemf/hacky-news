@@ -1,6 +1,7 @@
   <ol>
     <li ng-repeat= "item in links | orderBy : '-rank'">
-      <a ng-click = "upVote(item.id)">&#x25B2;</a>  <a href="{{ item.url }}">{{ item.title }}</a><p> {{item.points}} points by {{ item.userName }} ? hours ago
+      <a ng-click = "upVote(item.id)">&#x25B2;</a>  <a href="{{ item.url }}">{{ item.title }}</a><p> {{item.points}} points by {{ item.userName }} {{ hoursAgo(item.id) }}
        <a ui-sref="comments({ linkId: item.id })">| {{ item.comments.length }} comments</a></p>
     </li>
   </ol>
+  {{links}}
