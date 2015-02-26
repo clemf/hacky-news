@@ -12,7 +12,6 @@ hackyNews.factory('LinksFactory', function LinksFactory() {
                          user: factory.userName,
                          id: factory.links.length +1,
                          points: 0,
-                         numberOfComments: self.comments.length,
                          comments: [] });
     factory.linkTitle = null;
     factory.url = null;

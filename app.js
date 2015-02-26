@@ -13,5 +13,8 @@ hackyNews.config(function($stateProvider, $locationProvider) {
     controller: 'SubmissionsCtrl'
   });
 
-  $locationProvider;
+  $stateProvider.state('comments', {
+    url:"comments/:linkId",
+    templateUrl: "partials/comments.html"
+  })
 });

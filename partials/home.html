@@ -4,6 +4,6 @@
 <ul>
   <li ng-repeat= "item in links | orderBy : '-points'">
     <p><a ng-click = "upVote(item.id)">^</a><a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
-    {{ item }}
+    {{ item }} <a ui-sref="comments({ linkId: item.id })">comments</a>
   </li>
 </ul>
