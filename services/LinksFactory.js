@@ -6,13 +6,13 @@ hackyNews.factory('LinksFactory', function LinksFactory() {
   ];
 
   factory.addLink = function() {
-    factory.links.push({ title: factory.linkTitle, url: factory.url, user: factory.userName });
+    factory.links.push({ title: factory.linkTitle, url: factory.url, user: factory.userName, id: factory.links.length +1, points: 0 });
     factory.linkTitle = null;
     factory.url = null;
     factory.userName = null;
   };
   factory.upVote = function(id) {
-    
+
   };
 
   return factory;
