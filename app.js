@@ -15,6 +15,7 @@ hackyNews.config(function($stateProvider, $locationProvider) {
 
   $stateProvider.state('comments', {
     url:"comments/:linkId",
-    templateUrl: "partials/comments.html"
-  })
+    templateUrl: "partials/comments.html",
+    controller: "CommentsCtrl"
+  });
 });
