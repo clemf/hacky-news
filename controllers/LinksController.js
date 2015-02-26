@@ -2,7 +2,6 @@ hackyNews.controller('LinksCtrl', function LinksCtrl($scope, LinksFactory, Utili
   $scope.links = LinksFactory.links;
   $scope.LinksFactory = LinksFactory;
   $scope.upVote = function(id) {
-    console.log(id)
     $scope.link = UtilitiesFactory.findById(LinksFactory.links, id);
     $scope.link.points +=1;
 
