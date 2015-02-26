@@ -14,7 +14,7 @@
 <ul class="list-group">
   <li ng-repeat="item in link.comments" class="list-group-item">
     <dl>
-      <dt class="post-header">{{item.userName}}</dt>
+      <dt class="post-header">{{item.userName}} - {{ UtilitiesFactory.hoursAgo(comments, item.id)}}</dt>
       <dd>{{item.comment}}</dd>
     </dl>
   </li>
