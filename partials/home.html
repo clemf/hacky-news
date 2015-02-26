@@ -2,8 +2,8 @@
 <a ui-sref="submit">Submit a new link</a>
 
 <ul>
-  <li ng-repeat= "item in links | orderBy : '-points'">
+  <li ng-repeat= "item in links | orderBy : '-rank'">
     <p><a ng-click = "upVote(item.id)">^</a><a href="{{ item.url }}">{{ item.title }}</a>, by {{ item.userName }}</p>
-    {{ item }} <a ui-sref="comments({ linkId: item.id })">{{ item.comments.length }} comments</a>
+     <a ui-sref="comments({ linkId: item.id })">{{ item.comments.length }} comments</a>
   </li>
 </ul>

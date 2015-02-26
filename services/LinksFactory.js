@@ -18,7 +18,6 @@ hackyNews.factory('LinksFactory', function LinksFactory() {
     factory.linkTitle = null;
     factory.url = null;
     factory.userName = null;
-    factory.rankLinks();
   };
 
   factory.rankLinks = function() {

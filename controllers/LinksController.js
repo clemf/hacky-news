@@ -4,7 +4,6 @@ hackyNews.controller('LinksCtrl', function LinksCtrl($scope, LinksFactory, Utili
   $scope.upVote = function(id) {
     $scope.link = UtilitiesFactory.findById(LinksFactory.links, id);
     $scope.link.points +=1;
-    LinksFactory.rankLinks()
-    // LinksFactory.links[id].points += 1
   }
+  LinksFactory.rankLinks();
 });
