@@ -1,0 +1,22 @@
+<h3>{{ link.title }}</h3>
+<form ng-submit="addComment()" role="form">
+  <div class="form-group">
+    <label for="comment">Enter Your Name:</label>
+    <input ng-model="userName" type="text" class="form-control" placeholder="Name here" required>
+    <label for="comment">Enter Your Comment:</label>
+    <input ng-model="comment" type="textarea" class="form-control" placeholder="Comments here" required>
+  </div>
+  <button type="submit" class="btn">Add Comment</button>
+</form>
+
+<br>
+
+<ul class="list-group">
+  <li ng-repeat="item in link.comments" class="list-group-item">
+    <dl>
+      <dt class="post-header"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{item.userName}} - {{ UtilitiesFactory.hoursAgo(comments, item.id)}}</dt>
+      <dd>{{item.comment}}</dd>
+    </dl>
+  </li>
+</ul>
+<a ui-sref="home">Back to Main Page </a>

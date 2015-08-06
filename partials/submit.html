@@ -1,0 +1,14 @@
+<form  ng-submit="changeView('home')" role="form">
+  <legend>Submit a Link</legend>
+  <div class = "form-group">
+    <label for=""></label>
+    <input ng-model="LinksFactory.linkTitle" placeholder="Enter the Link Title" class="form-control" type="text" required>
+  </div>
+  <div class = "form-group">
+    <input ng-model="LinksFactory.url" placeholder="Enter the Link URL" class="form-control" type="text" required>
+  </div>
+  <div class = "form-group">
+    <input ng-model="LinksFactory.userName" placeholder="Enter Your User Name" class="form-control" type="text" required>
+  </div>
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
